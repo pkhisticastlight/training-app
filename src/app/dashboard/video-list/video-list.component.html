@@ -1,3 +1,18 @@
-<p>
-  video-list works!
-</p>
+<div class="item item-1">
+  <mat-toolbar color="accent"> 
+    <mat-toolbar-row>
+        <span>Top Videos</span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  <mat-card *ngIf="videoList">
+    <mat-list>
+      <mat-list-item class=video-image *ngFor="let item of videoList"> 
+        <h3 class="video-title" mat-line (click)="onVideoSelect(item)">  {{item.snippet.title}} </h3>
+        <span class="spacer"></span>
+        <p mat-line>
+          <img src="{{item.snippet.thumbnails.default.url}}">
+        </p>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+</div>

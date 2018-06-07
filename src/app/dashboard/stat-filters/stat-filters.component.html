@@ -1,3 +1,40 @@
-<p>
-  stat-filters works!
-</p>
+<div class="item item-3">
+  <mat-toolbar color="accent"> 
+  <mat-toolbar-row>
+      <span>Filter Videos</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-card>
+    <h4 class="example-h2">Page Size</h4>
+    <mat-slider
+        class="example-margin"
+        [disabled]="false"
+        [invert]="false"
+        [max]="20"
+        [min]="2"
+        [step]="5"
+        [thumbLabel]="false"
+        [tickInterval]="true"
+        [vertical]="false">
+    </mat-slider>
+    <div class="example-container">
+      <h4 class="example-h2">Search Title</h4>
+      <mat-form-field>
+        <input matInput placeholder="Search Title">
+      </mat-form-field>
+      <h4 class="example-h2">Created After!</h4>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+       <mat-form-field>
+ <h4 class="example-h2">Dummy Filter</h4>
+            <mat-slide-toggle
+          class="example-margin">
+        Slide me!
+      </mat-slide-toggle>
+       </mat-form-field>
+    </div>
+  </mat-card>
+</div>

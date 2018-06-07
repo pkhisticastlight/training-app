@@ -1,3 +1,27 @@
-<p>
-  video-player works!
-</p>
+
+<div class="item item-2">
+  <mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>{{internalVideo?.snippet.title}}</span>
+    <span class="example-spacer"></span>
+    <mat-icon class="example-icon">favorite</mat-icon>
+    <mat-icon class="example-icon">delete</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>
+  <mat-card class="example-card" *ngIf="internalVideo?.snippet">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{internalVideo?.snippet.title}}</mat-card-title>
+    <mat-card-subtitle> {{internalVideo?.snippet.channelTitle}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image  src="{{internalVideo?.snippet.thumbnails.high.url}}" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+     {{internalVideo?.snippet.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="accent">LIKE</button>
+    <button mat-raised-button color="accent">SHARE</button>
+  </mat-card-actions>
+</mat-card>

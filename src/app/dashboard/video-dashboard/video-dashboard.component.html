@@ -1,3 +1,10 @@
-<p>
-  video-dashboard works!
-</p>
+ <div class="container"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="1px"
+     fxLayoutGap.xs="0">
+  <app-video-list (selectedItem)="selectedItem($event)" [videoList]="videoList" selectedItem="selectedItem(item)" fxFlex="20%" ></app-video-list>
+  <app-video-player #videoDetails fxFlex="50%" fxFlexOrder="2"></app-video-player>
+  <app-stat-filters fxFlexOrder="2" fxFlex></app-stat-filters>
+</div>

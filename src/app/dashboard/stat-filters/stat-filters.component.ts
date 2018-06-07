@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stat-filters.component.css']
 })
 export class StatFiltersComponent implements OnInit {
-
+  pageSize: number;
   constructor() { }
 
   ngOnInit() {
